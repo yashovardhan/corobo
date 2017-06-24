@@ -1,0 +1,14 @@
+name: branch
+what: >
+    A branch is essentially a pointer to the last commit you made. As you go on
+    committing, this pointer will automatically update to point the latest
+    commit. You use branches to work on more than one features parallelly,
+    without one affecting the other.
+
+how:
+    create: |
+        You can create a new branch from current branch, using `git checkout -b <branch name>`.
+        Usually you'd want to branch off of master.
+    change: &checkout You can switch branch using `git checkout <branch name>`
+    checkout: *checkout
+    switch: *checkout
