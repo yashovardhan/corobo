@@ -1,0 +1,215 @@
+Adding_CI.rst:
+  adding-ci-to-your-fork:
+    keywords:
+      - CI
+      - tutorial
+    answers:
+      - how
+  travis-ci:
+    keywords:
+      - Travis
+      - CI
+    answers:
+      - how
+  appveyor-ci:
+    keywords:
+      - Appveyor
+      - CI
+    answers:
+      - how
+  circle-ci:
+    keywords:
+      - Circle
+      - CI
+    answers:
+      - how
+  codecov:
+    keywords:
+      - Codecov
+      - CI
+    answers:
+      - how
+
+Bear_Installation_Tool.rst:
+  bear-installation-tool:
+    keywords:
+      - cib
+      - Installation
+      - Bears
+    answers:
+      - what
+  installation:
+    keywords:
+      - cib
+      - Installation
+    answers:
+      - how
+  usage:
+    keywords:
+      - use
+      - cib
+    answers:
+      - how
+
+Codestyle.rst:
+  codestyle-for-coala:
+    keywords:
+      - codestyle
+      - coala
+    answers:
+      - what
+  documentation-comments:
+    keywords:
+      - documentation
+      - comments
+    answers:
+      what
+  type-checking:
+    keywords:
+      - python
+      - type
+      - check
+    answers:
+      - how
+  line-continuation:
+    keywords:
+      - line-length
+      - line
+      - line-continuation
+      - continuation
+      - wrap
+    answers:
+      - how
+
+Git_Basics.rst:
+  git-tutorial:
+    keywords:
+      - git
+      - tutorial
+    answers:
+      - what
+  how-to-install-git:
+    keywords:
+      - git
+      - install
+    answers:
+      - how
+  getting-started-with-coala:
+    keywords:
+      - getting-started
+      - start
+      - coala
+    answers:
+      - how
+  grabbing-coala-on-your-local-machine:
+    keywords:
+      - coala
+      - local-machine
+      - grab
+      - git
+      - clone
+      - install
+    answers:
+      - how
+  getting-to-work:
+    keywords:
+      - git
+      - remotes
+      - fork
+    answers:
+      - how
+  creating-a-new-branch:
+    keywords:
+      - git
+      - branch
+      - create
+      - new
+    answers:
+      - how
+  checking-your-work:
+    keywords:
+      - check
+      - work
+      - git
+      - status
+    answers:
+      - how
+  adding-the-files-and-commiting:
+    keywords:
+      - git
+      - add
+      - commit
+      - git-add
+      - git-commit
+      - commit-message
+      - commit-body
+      - commit-shortlog
+      - body
+      - message
+      - shortlog
+    answers:
+      - how
+  run-coala:
+    keywords:
+      - run
+      - coala
+    answers:
+      - how
+  pushing-the-commit:
+    keywords:
+      - git
+      - commit
+      - push
+      - git-push
+    answers:
+      - how
+  creating-a-pull-request:
+    keywords:
+      - pull-request
+      - pull request
+    answers:
+      - how
+  rebasing:
+    keywords:
+      - git
+      - rebase
+      - out-of-sync
+      - update-branch
+      - update branch
+    answers:
+      - how
+  squashing-your-commits:
+    keywords:
+      - git
+      - squash
+      - commit
+    answers:
+      - how
+  common-git-issues:
+    keywords:
+      - revert
+      - checkout
+      - commit
+      - amend
+      - git
+      - log
+    answers:
+      - how
+  useful-git-commands:
+    keywords:
+      - git
+      - config
+      - author
+      - log
+      - push
+      - force-push
+      - force
+      - reset
+      - hard-reset
+      - soft-reset
+      - clean
+      - checkout
+      - rebase
+      - interactive-rebase
+    answers:
+      - how
