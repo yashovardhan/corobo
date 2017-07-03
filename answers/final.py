@@ -36,8 +36,9 @@ def get_answer(question, graph):
     if start in graph and end in graph:
       # if len(networkx.algorithms.shortest_path(graph, start, end)) > 2:
       #   continue
-      for node in networkx.algorithms.shortest_path(graph, start, end):
-        scores.update(graph.node.get(node)['text'])
+      for path in networkx.algorithms.all_shortest_path(graph, start, end):
+        for node in path:
+          scores.update(graph.node.get(node)['text'])
     else:
       # print('cannot find one of or both', start, end)
       pass

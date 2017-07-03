@@ -1,0 +1,12 @@
+>> how to squash commits in git
+[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1083), ("Squashing your commits\nIt's possible that you have more than one commit and you want them to be\nsqua", 723), ("Common Git Issues\nSometimes, you use git add-A and add files you didn't want to your push (often\naft", 653)]
+>> how to run coala
+[('Usage\nTo use the tool, you need to give it arguments.\nTo install bears, simply run cib install follo', 113), ('Travis CI\nTravis is used to confirm that the tools install and build\nproperly. It also runs the test', 87), ('Circle CI\nCircle CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 85)]
+>> rebase
+[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 12), ("Common Git Issues\nSometimes, you use git add-A and add files you didn't want to your push (often\naft", 4), ('Follow-up\nNow after you have created the Pull Request, there are two possibilities:\nyour PR will get', 2)]
+>> how to perform a rebase
+[]
+>> getting started
+[('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 12), ('Adding CI to your Fork\nThis tutorial will help you add the CI tools, that are used in\ncoala reposito', 10), ('Getting Started with coala\nFirst of all, you have to fork the repository you are going to contribute', 7)]
+>> remotes
+[('Rebasing\nAs people work on coala new commits will be added. This will result in your\nlocal fork goin', 8), ("Common Git Issues\nSometimes, you use git add-A and add files you didn't want to your push (often\naft", 4), ('Grabbing coala on your local machine\nNow you should clone the repository to your local machine so th', 3)]
