@@ -86,13 +86,16 @@ def extract_info(rst):
     return DATA
 
 def parse_index():
-    with open('index.yaml') as f:
-        index = yaml.load(f)
-    for file_name in index.keys():
-        try:
-            extract_info(parse_rst('coala/docs/Developers/' + file_name))
-        except FileNotFoundError:
-            logging.warning('File {} was not parsed and collected'.format(file_name))
+    try:
+        with open('answers/index.yaml') as f:
+            index = yaml.load(f)
+        for file_name in index.keys():
+            try:
+                extract_info(parse_rst('answers/coala/docs/Developers/' + file_name))
+            except FileNotFoundError:
+                logging.warning('File {} was not parsed and collected'.format(file_name))
+    except FileNotFoundError:
+        logging.warning('index.yaml not found')
     global DATA
     for file_name, contents in index.items():
         for section_name, data in contents.items():
