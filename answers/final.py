@@ -17,10 +17,12 @@ DATA = {}
 
 def grapheize(graph, doc, attrs={}):
   for token in doc:
+    if token.tag_ in ['EX', 'HVS', 'MD', 'PDT', 'IN', 'DT', 'TO', 'CD', 'CC', '-LRB-', 'HYPH', ':']:
+      continue
     nodes = [token.lemma_, token.head.lemma_]
     for node in nodes:
       if node not in graph:
-        graph.add_node(node, docs=[], sections=[])
+        graph.add_node(node, docs=[], sections=[], token=token)
       node = graph.node.get(node)
       for key, value in attrs.items():
         node.setdefault(key, []).append(value)
