@@ -22,10 +22,10 @@ def grapheize(graph, doc, attrs={}):
     nodes = [token.lemma_, token.head.lemma_]
     for node in nodes:
       if node not in graph:
-        graph.add_node(node, docs=[], sections=[], token=token)
+        graph.add_node(node, token=token)
       node = graph.node.get(node)
       for key, value in attrs.items():
-        node.setdefault(key, []).append(value)
+        node.setdefault(key, set()).update([value])
     graph.add_edge(*nodes)
 
 def get_answer(question, graph):
@@ -36,7 +36,7 @@ def get_answer(question, graph):
     if start in graph and end in graph:
       # if len(networkx.algorithms.shortest_path(graph, start, end)) > 2:
       #   continue
-      for path in networkx.algorithms.all_shortest_path(graph, start, end):
+      for path in networkx.algorithms.all_shortest_paths(graph, start, end):
         for node in path:
           scores.update(graph.node.get(node)['text'])
     else:
