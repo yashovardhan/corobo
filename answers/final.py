@@ -1,3 +1,4 @@
+import collections
 import docutils
 import docutils.nodes
 from docutils.parsers.rst import directives
@@ -7,9 +8,40 @@ from collections import OrderedDict
 import nltk
 from gensim.utils import simple_preprocess
 from gensim.parsing.preprocessing import STOPWORDS
+import spacy
+import networkx
 
+nlp = spacy.load('en_core_web_md')
 
 DATA = {}
+
+def grapheize(graph, doc, attrs={}):
+  for token in doc:
+    nodes = [token.lemma_, token.head.lemma_]
+    for node in nodes:
+      if node not in graph:
+        graph.add_node(node, docs=[], sections=[])
+      node = graph.node.get(node)
+      for key, value in attrs.items():
+        node.setdefault(key, []).append(value)
+    graph.add_edge(*nodes)
+
+def get_answer(question, graph):
+  q_graph = networkx.Graph()
+  grapheize(q_graph, nlp(question))
+  scores = collections.Counter()
+  for start, end in q_graph.edges():
+    if start in graph and end in graph:
+      # if len(networkx.algorithms.shortest_path(graph, start, end)) > 2:
+      #   continue
+      for node in networkx.algorithms.shortest_path(graph, start, end):
+        scores.update(graph.node.get(node)['text'])
+    else:
+      # print('cannot find one of or both', start, end)
+      pass
+  for doc, i in scores.most_common(3):
+    yield (doc, i)
+
 
 def handle_non_section_nodes(section_node, non_section_child_nodes):
     non_code_nodes = filter(lambda x: type(x) not in [docutils.nodes.literal_block],
@@ -64,8 +96,22 @@ def parse_index():
             DATA[section_name]['keywords'] = data['keywords']
             DATA[section_name]['answers'] = data['answers']
 
-parse_index()
+def construct_graph():
+    graph = networkx.Graph()
+    for name, doc in DATA.items():
+        meta = {
+            'section_name': name,
+            'code': doc['code'],
+            'text': doc['text']
+        }
+        for sent in nlp(doc['text']).sents:
+            grapheize(graph, sent, meta)
+    return graph
 
+parse_index()
+graph = construct_graph()
+
+"""
 def answer(question):
     global DATA
     question_tags = list(filter(lambda x: x[1].startswith('W'),
@@ -87,11 +133,12 @@ def create_graph():
     for file in index:
         doc = parse_rst('coala/docs/Developers/' + file)
 '''
-
+"""
 if __name__ == '__main__':
     try:
+        mod = lambda y: map(lambda x: (x[0][:100], x[1]), y)
         while True:
             q = input('>> ')
-            print(answer(q))
+            print(list(mod(list(get_answer(q, graph)))))
     except KeyboardInterrupt:
         print('exiting...')
