@@ -10,6 +10,7 @@ from gensim.utils import simple_preprocess
 from gensim.parsing.preprocessing import STOPWORDS
 import spacy
 import networkx
+import os
 
 nlp = spacy.load('en_core_web_md')
 
@@ -85,22 +86,12 @@ def extract_info(rst):
     global DATA
     return DATA
 
-def parse_index():
-    try:
-        with open('answers/index.yaml') as f:
-            index = yaml.load(f)
-        for file_name in index.keys():
-            try:
-                extract_info(parse_rst('answers/coala/docs/Developers/' + file_name))
-            except FileNotFoundError:
-                logging.warning('File {} was not parsed and collected'.format(file_name))
-    except FileNotFoundError:
-        logging.warning('index.yaml not found')
-    global DATA
-    for file_name, contents in index.items():
-        for section_name, data in contents.items():
-            DATA[section_name]['keywords'] = data['keywords']
-            DATA[section_name]['answers'] = data['answers']
+def get_abs_path(path):
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), path)
+
+def parse_docs():
+    for files in os.listdir(get_abs_path('coala/docs/Developers')):
+        parse_rst(open(get_abs_path('coala/docs/Developers/' + files)))
 
 def construct_graph():
     graph = networkx.Graph()
@@ -114,7 +105,7 @@ def construct_graph():
             grapheize(graph, sent, meta)
     return graph
 
-parse_index()
+parse_docs()
 graph = construct_graph()
 
 """
