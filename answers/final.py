@@ -31,7 +31,13 @@ def grapheize(graph, doc, attrs={}):
 
 def get_answer(question, graph):
   q_graph = networkx.Graph()
-  grapheize(q_graph, nlp(question))
+  q_doc = nlp(question)
+  q_type = []
+  for token in q_doc:
+      if token.tag_.startswith('W'):
+          q_type.append(token)
+
+  grapheize(q_graph, q_doc, attrs={'q_type': q_type})
   scores = collections.Counter()
   for start, end in q_graph.edges():
     if start in graph and end in graph:
