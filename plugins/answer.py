@@ -7,7 +7,7 @@ class Answer(BotPlugin):
 
     @botcmd
     def answer(self, msg, arg):
-        answers = get_answer(arg)
+        answers = get_answer(arg, final=True)
         if answers:
             return answers[0][0]
         else:
