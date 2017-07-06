@@ -30,7 +30,9 @@ def parse_rst(path):
     :return: The document object
     """
     rst = open(path)
-    default_settings = docutils.frontend.OptionParser(components=(docutils.parsers.rst.Parser, )).get_default_values()
+    default_settings = docutils.frontend.OptionParser(
+        components=(docutils.parsers.rst.Parser, )
+        ).get_default_values()
     document = docutils.utils.new_document(rst.name, default_settings)
     parser =  docutils.parsers.rst.Parser()
     parser.parse(rst.read(), document)
@@ -47,6 +49,8 @@ def handle_non_section_nodes(section_node, non_section_child_nodes):
                         non_section_child_nodes)
     code = '\n'.join(map(lambda x: x.astext(), code_nodes))
     text = '\n'.join(map(lambda x: x.astext(), non_code_nodes))
+
+    global DATA
     DATA[section_node.get('ids')[0]] = {
         "code": code,
         "text": text
@@ -62,7 +66,6 @@ def parse_docs():
     """
     Parse all documentation files and store information in DATA
     """
-    global DATA
     for files in os.listdir(get_abs_path('coala/docs/Developers')):
         rst = parse_rst(get_abs_path('coala/docs/Developers/' + files))
         extractor = Extractor(rst)

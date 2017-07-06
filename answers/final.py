@@ -21,7 +21,7 @@ def grapheize(graph, doc, attrs={}):
         for node in nodes:
             if node not in graph:
                 graph.add_node(node, token=token)
-            node = graph.node.get(node)
+        node = graph.node.get(node)
         for key, value in attrs.items():
             node.setdefault(key, set()).update([value])
     graph.add_edge(*nodes)
