@@ -28,7 +28,7 @@ def grapheize(graph, doc, attrs={}):
                 graph.add_node(node, token=token)
             node = graph.node.get(node)
             for key, value in attrs.items():
-                node.setdefault(key, set()).update([value])
+                node.setdefault(key, []).append(value)
         graph.add_edge(*nodes)
 
 def get_answer(question, graph, final=False):
