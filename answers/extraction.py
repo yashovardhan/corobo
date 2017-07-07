@@ -19,10 +19,14 @@ class Extractor(docutils.nodes.SparseNodeVisitor):
     Node visitor to extract information from nodes.
     """
 
+    def __init__(self, document, name=''):
+        super().__init__(document)
+        self.name = name
+
     def visit_section(self, node):
         non_section_childs = list(filter(lambda x: type(x) != docutils.nodes.section,
                                          node.children))
-        handle_non_section_nodes(node, non_section_childs)
+        handle_non_section_nodes(node, non_section_childs, self.name)
 
 def parse_rst(path):
     """
@@ -39,7 +43,7 @@ def parse_rst(path):
     rst.close()
     return document
 
-def handle_non_section_nodes(section_node, non_section_child_nodes):
+def handle_non_section_nodes(section_node, non_section_child_nodes, doc_name):
     """
     All the ndoes that are not section nodes are parsed here.
     """
@@ -53,7 +57,8 @@ def handle_non_section_nodes(section_node, non_section_child_nodes):
     global DATA
     DATA[section_node.get('ids')[0]] = {
         "code": code,
-        "text": text
+        "text": text + '\n' + doc_name[:-4] + '.html#' + section_node.get('ids')[0],
+        "file": doc_name
     }
 
 def get_abs_path(path):
@@ -68,5 +73,5 @@ def parse_docs():
     """
     for files in os.listdir(get_abs_path('coala/docs/Developers')):
         rst = parse_rst(get_abs_path('coala/docs/Developers/' + files))
-        extractor = Extractor(rst)
+        extractor = Extractor(rst, files)
         rst.walk(extractor)
