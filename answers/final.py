@@ -49,13 +49,20 @@ def get_answer(question, graph, final=False):
                 for node in path:
                     scores.update(graph.node.get(node)['text'])
 
-    # sorted_counter = OrderedDict(sorted(scores.items(), key=lambda x: x[1],
-                                        # reverse=True))
+    sorted_counter = OrderedDict(sorted(scores.items(), key=lambda x: x[1],
+                                        reverse=True))
 
-    for key in scores.keys():
-        scores[key] /= len(set(key.split()))
+    items = list(sorted_counter.items())
+    min_score = items[-1][1]
+    max_score = items[0][1]
+    diff_max_min = max_score - min_score
 
-    for doc, i in scores.most_common(3):
+    for item in items:
+        key = item[0]
+        score = item[1]
+        sorted_counter[key] = ((score - min_score) / diff_max_min)
+
+    for doc, i in Counter(sorted_counter).most_common(3):
         yield (doc, i)
 
 
