@@ -14,6 +14,19 @@ import docutils.parsers.rst
 DATA = {}
 
 
+class IgnoredDirective(docutils.parsers.rst.Directive):
+
+    """Stub for unknown directives."""
+
+    has_content = True
+
+    def run(self):
+        """Do nothing."""
+        return []
+
+docutils.parsers.rst.directives.register_directive('seealso', IgnoredDirective)
+docutils.parsers.rst.directives.register_directive('argparse', IgnoredDirective)
+
 class Extractor(docutils.nodes.SparseNodeVisitor):
     """
     Node visitor to extract information from nodes.
