@@ -11,20 +11,25 @@ from answers.extraction import DATA, parse_docs
 
 parse_docs()
 
-nlp = spacy.load('en')
+nlp = spacy.load('en_core_web_md')
 
 def grapheize(graph, doc, attrs={}):
+    unallowed_tags = [
+        'EX', 'HVS', 'MD', 'PDT',
+        'IN', 'DT', 'TO', 'CD',
+        'CC', '-LRB-', 'HYPH', ':'
+    ]
     for token in doc:
-        if token.tag_ in ['EX', 'HVS', 'MD', 'PDT', 'IN', 'DT', 'TO', 'CD', 'CC', '-LRB-', 'HYPH', ':']:
+        if (token.tag_ in unallowed_tags) or (token == token.head):
             continue
         nodes = [token.lemma_, token.head.lemma_]
         for node in nodes:
             if node not in graph:
                 graph.add_node(node, token=token)
-        node = graph.node.get(node)
-        for key, value in attrs.items():
-            node.setdefault(key, set()).update([value])
-    graph.add_edge(*nodes)
+            node = graph.node.get(node)
+            for key, value in attrs.items():
+                node.setdefault(key, set()).update([value])
+        graph.add_edge(*nodes)
 
 def get_answer(question, graph, final=False):
     q_graph = networkx.Graph()
