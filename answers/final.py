@@ -61,8 +61,7 @@ def construct_graph():
             'code': doc['code'],
             'text': doc['text']
         }
-        for sent in nlp(doc['text']).sents:
-            grapheize(graph, sent, meta)
+        grapheize(graph, nlp(doc['text']), meta)
     return graph
 
 graph = construct_graph()
