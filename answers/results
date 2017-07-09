@@ -1,19 +1,99 @@
->> how to squash commits in git
-[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1.0), ('Writing a Bear in C++\nThe bear that will be created with this tutorial will check whether there is\na', 0.5431754874651811), ('Step 4. Creating a Fork and Testing Your Changes\nThis tutorial implies you working on your fork. To ', 0.5264623955431755)]
+
+w to squash commits in git                                                                                              [70/1985][('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1.0), ('Step 4. Creating a
+ Fork and Testing Your Changes\nThis tutorial implies you working on your fork. To ', 0.4500574052812859), ('Rebasing\nAs people work
+on coala new commits will be added. This will result in your\nlocal fork goin', 0.425947187141217)]
 >> how to run coala
-[('Actually Writing a Test\nSo how do you implement a test in coala? First up, tests are placed into\nthe', 1.0), ('Writing a Bear in C++\nThe bear that will be created with this tutorial will check whether there is\na', 0.9), ('Writing a Bear With Javascript and Node\nThis part of the tutorial will demonstrate how to make an Ex', 0.7535714285714286)]
+[('Actually Writing a Test\nSo how do you implement a test in coala? First up, tests are placed into\nthe', 1.0), ('Writing a Bear in
+C++\nThe bear that will be created with this tutorial will check whether there is\na', 0.8432343234323433), ('Writing a Bear With Jav$
+script and Node\nThis part of the tutorial will demonstrate how to make an Ex', 0.7013201320132013)]
 >> getting started
-[('Actually Writing a Test\nSo how do you implement a test in coala? First up, tests are placed into\nthe', 1.0), ('Executing our Tests\ncoala has a big test suite. It is meant to work on every platform on\nevery PC. I', 0.8823529411764706), ('Welcome to the Newcomers Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.8235294117647058)]
->> performing a rebase
-[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1.0), ('Writing a Bear in C++\nThe bear that will be created with this tutorial will check whether there is\na', 0.9545454545454546), ('Welcome to the Newcomers Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.9393939393939394)]
->> how to write good commit
-[('Why Do We Need Good Commits?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 1.0), ('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 0.9661016949152542), ("Squashing your commits\nIt's possible that you have more than one commit and you want them to be\nsqua", 0.864406779661017)]
+[('Actually Writing a Test\nSo how do you implement a test in coala? First up, tests are placed into\nthe', 1.0), ('Executing our Test
+s\ncoala has a big test suite. It is meant to work on every platform on\nevery PC. I', 0.8823529411764706), ('Welcome to the Newcomers
+ Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.8235294117647058)]
+>> performing a rebas
+[('Rebasing\nAs people work on coala new commits will be added. This will result in your\nlocal fork goin', 1.0), ('Step 8. Review Pro
+cess\nAfter creating your Pull Request, it is under the review process. This can\nbe', 0.9545454545454546), ('Welcome to the Newcomers
+ Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.9454545454545454)]
+>> how to write a good commit
+[('Why Do We Need Good Commits?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 1.0), ('Useful Git command
+s\nThis section will briefly explain some other Git commands you will most likely\nu', 0.9606741573033708), ("Squashing your commits\n
+It's possible that you have more than one commit and you want them to be\nsqua", 0.8651685393258427)]
 >> travis ci
-[('Travis CI\nTravis is used to confirm that the tools install and build\nproperly. It also runs the test', 1.0), ('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 0.5555555555555556), ('Circle CI\nCircle CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 0.5)]
+[('Travis CI\nTravis is used to confirm that the tools install and build\nproperly. It also runs the test', 1.0), ('AppVeyor CI\nTo fi
+nd out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 0.46511627906976744), ('Circle CI\nCircle CI is
+ also used for the same purpose as travis, to\ncheck everything installs and bu', 0.4418604651162791)]
 >> circle ci
-[('Circle CI\nCircle CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 1.0), ('Travis CI\nTravis is used to confirm that the tools install and build\nproperly. It also runs the test', 0.9166666666666666), ('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 0.8333333333333334)]
->> appveyor ci
-[('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 1.0), ('Travis CI\nTravis is used to confirm that the tools install and build\nproperly. It also runs the test', 0.6470588235294118), ('Circle CI\nCircle CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 0.47058823529411764)]
+[('Circle CI\nCircle CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 1.0), ('Travis CI\nTravis
+is used to confirm that the tools install and build\nproperly. It also runs the test', 0.7857142857142857), ('AppVeyor CI\nTo find out
+ how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 0.7142857142857143)]
+>> appveyor ci                                                                                                               [42/1985][('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 1.0), ('Travis CI\nTravis
+is used to confirm that the tools install and build\nproperly. It also runs the test', 0.5365853658536586), ('Circle CI\nCircle CI is
+also used for the same purpose as travis, to\ncheck everything installs and bu', 0.3902439024390244)]
+>> linux system
+[('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 1.0), ('Step 4. Creating a
+ Fork and Testing Your Changes\nThis tutorial implies you working on your fork. To ', 0.8571428571428571), ("Bears Depending on Other
+Bears\nSo we've got a result, but what if we need our Bear to depend on resu", 0.8571428571428571)]
 >> install cib
-[('Usage\nTo use the tool, you need to give it arguments.\nTo install bears, simply run cib install follo', 1.0), ('Installing from Git\n/home/meet/meet/answers/corobo/answers/coala/docs/Developers/Development_Setup.r', 0.375), ('Using virtualenv\nInstall virtualenv using pip :\n\n$ pip3 install virtualenv\n\nCreate the virtualenv :\n', 0.1875)]
+[('Usage\nTo use the tool, you need to give it arguments.\nTo install bears, simply run cib install follo', 1.0), ('Installing from Gi
+t\n/home/meet/meet/answers/corobo/answers/coala/docs/Developers/Development_Setup.r', 0.3333333333333333), ('Executing our Tests\ncoal
+a has a big test suite. It is meant to work on every platform on\nevery PC. I', 0.16666666666666666)]
+>> commit shortlog
+[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1.0), ("Squashing your com
+mits\nIt's possible that you have more than one commit and you want them to be\nsqua", 0.9259259259259259), ("Common Git Issues\nSomet
+imes, you use git add-A and add files you didn't want to your push (often\naft", 0.8888888888888888)]
+>> issue reference
+[('Step 3. Picking Up an Issue\nNow it is time to pick an issue.\nIt is the best way to familiarise yours', 1.0), ('Step 8. Review Pro
+cess\nAfter creating your Pull Request, it is under the review process. This can\nbe', 0.625), ('Issue reference\nExample:\nShould use
+ the Fixes keyword if your commit fixes a bug, or Closes\nif it ad', 0.4583333333333333)]
+>> why should I write good commits
+[('Why Do We Need Good Commits?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 1.0), ('Useful Git command
+s\nThis section will briefly explain some other Git commands you will most likely\nu', 0.9608433734939759), ('Step 8. Review Process\n
+After creating your Pull Request, it is under the review process. This can\nbe', 0.9578313253012049)]
+>> what is type checkin
+[('Why Do We Need Good Commits?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 1.0), ('Writing a Bear in
+C++\nThe bear that will be created with this tutorial will check whether there is\na', 0.9911504424778761), ('Welcome to the Newcomers
+ Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.9557522123893806)]
+>> why documentation comments                                                                                                [14/1985][('For the Reviewers\nGenerated code is not intended to be reviewed. Instead rather try to\nverify that t', 1.0), ('Step 8. Review Pro
+cess\nAfter creating your Pull Request, it is under the review process. This can\nbe', 0.9714285714285714), ('Adding the files and com
+miting\nNow you can add your files/folders to the current commit:\nDo this unt', 0.8857142857142857)]
+>> Line continuation
+[('Line Continuation\nSince line continuation is not covered by PEP8 coding style guide you are\nsupposed', 1.0), ('Understanding thro
+ugh examples\nLet us understand how to write tests for TooManyLinesBear in some_dir', 0.5555555555555556), ('Writing the Bear\nTo writ
+e a linter bear, we need to create a class that interfaces with our\nlinter-b', 0.3888888888888889)]
+>> Type checking
+[('Step 5. Sending Your Changes\nBefore committing your changes, please check that you are indeed in a\nd', 1.0), ('The JSON Spec\ncoa
+la will send you data in a JSON string via stdin and the executable has to\nprovide ', 0.6451612903225806), ('Additional Prerequisite
+Check\n@linter supports doing an additional executable check before running t', 0.6451612903225806)]
+>> Documentation Comments
+[('Writing Documentation\nThis document gives a short introduction on how to write documentation\nfor the', 1.0), ('For the Reviewers\
+nGenerated code is not intended to be reviewed. Instead rather try to\nverify that t', 0.9), ('Documentation Comments\nA documentation
+ comment consists of 2 parts split by a newline:\nthe descripti', 0.9)]
+>> advanced review process
+[('Step 8. Review Process\nAfter creating your Pull Request, it is under the review process. This can\nbe', 1.0), ('Manual Review Proc
+ess\nThe review process for coala is as follows:\nAnyone can submit commits for revi', 0.9204892966360856), ('Writing a Bear in C++\nT
+he bear that will be created with this tutorial will check whether there is\na', 0.7522935779816514)]
+>> how to install git
+[('Useful Git commands\nThis section will briefly explain some other Git commands you will most likely\nu', 1.0), ('Usage\nTo use the
+tool, you need to give it arguments.\nTo install bears, simply run cib install follo', 0.7246376811594203), ('Installing from Git\n/ho
+me/meet/meet/answers/corobo/answers/coala/docs/Developers/Development_Setup.r', 0.5072463768115942)]
+>> how to build documentation
+[('AppVeyor CI\nTo find out how coala acts in Microsoft Windows, we use\nAppVeyor which runs test and bui', 1.0), ('Circle CI\nCircle
+CI is also used for the same purpose as travis, to\ncheck everything installs and bu', 0.7956989247311828), ('Travis CI\nTravis is use
+d to confirm that the tools install and build\nproperly. It also runs the test', 0.48028673835125446)]
+>> what is a virtualenv
+[('Writing a Bear in C++\nThe bear that will be created with this tutorial will check whether there is\na', 1.0), ('Welcome to the New
+comers Guide!\nDO NOT WORK ON ANY ISSUE WITHOUT ASSIGNMENT! If you do, someone else', 0.9719789842381786), ('Why Do We Need Good Commi
+ts?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 0.9185639229422067)]
+>> what is a bear
+[('Writing a Bear in C++\nThe bear that will be created with this tutorial will check whether there is\na', 1.0), ('Writing the Bear\n
+To write a linter bear, we need to create a class that interfaces with our\nlinter-b', 0.8961538461538462), ('Why Do We Need Good Comm
+its?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 0.8576923076923076)]
+>> what data types are supported
+[('Why Do We Need Good Commits?\nAn atomic commit is way easier to review. The reviewer thus will be\nabl', 1.0), ('What Data Types ar
+e Supported?\nThe Setting does support some very basic types:\nString (str)\n\nFloat (', 0.9923664122137404), ('Writing the Bear\nTo w
+rite a linter bear, we need to create a class that interfaces with our\nlinter-b', 0.9770992366412213)]
+>> writing tests
+[('Actually Writing a Test\nSo how do you implement a test in coala? First up, tests are placed into\nthe', 1.0), ('Introduction\nTest
+s are an essential element to check if your written components in\ncoala really do w', 0.6), ('Executing our Tests\ncoala has a big te
+st suite. It is meant to work on every platform on\nevery PC. I', 0.3625)]
 
