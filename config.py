@@ -45,4 +45,6 @@ ROOMS_TO_JOIN = (
 
 CHATROOM_PRESENCE = os.environ.get('ROOMS', '').split() or ROOMS_TO_JOIN
 
+SUPPRESS_CMD_NOT_FOUND = True
+
 AUTOINSTALL_DEPS = True
