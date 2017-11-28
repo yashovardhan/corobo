@@ -27,3 +27,12 @@ class Filters(BotPlugin):
         if msg.frm.nick in self.bot_config.IGNORE_USERNAMES:
             return None, None, None
         return msg, cmd, args
+
+    @cmdfilter
+    def filter_private_diverts(self, msg, cmd, args, dry_run):
+        """
+        Leave a message that response is diverted as private message.
+        """
+        if cmd in self.bot_config.DIVERT_TO_PRIVATE:
+            self.send(msg.frm, '@{}, help message is diverted into private, check DM with @co-robo')
+        return msg, cmd, args
